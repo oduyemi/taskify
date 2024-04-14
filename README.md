@@ -1,4 +1,4 @@
-# Taskify Frontend Documentation
+# Taskify Documentation
 
 ## Introduction
 Taskify is a web application designed for managing and assigning tasks to mentees on an individual basis. It provides a user-friendly interface for mentors to create tasks, assign them to specific mentees, and monitor their progress. Taskify utilizes modern web technologies, including React for building dynamic user interfaces, Tailwind CSS for styling, Material-UI (MUI) for UI components, and interacts with the ProTask API backend.
