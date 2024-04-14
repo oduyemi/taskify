@@ -1,70 +1,84 @@
-# Getting Started with Create React App
+# Taskify Frontend Documentation
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Introduction
+Taskify is a web application designed for managing and assigning tasks to mentees on an individual basis. It provides a user-friendly interface for mentors to create tasks, assign them to specific mentees, and monitor their progress. Taskify utilizes modern web technologies, including React for building dynamic user interfaces, Tailwind CSS for styling, Material-UI (MUI) for UI components, and interacts with the ProTask API backend.
 
-## Available Scripts
+## Features
+- **Task Management**: Mentors can create, edit, and delete tasks.
+- **Task Assignment**: Mentors can assign tasks to specific mentees.
+- **Task Monitoring**: Mentors can track the progress of assigned tasks and provide feedback.
+- **User Authentication**: Secure login and authentication system for mentors and mentees.
+- **File Attachments**: Mentors and mentees can attach files to tasks for reference or submission.
+- **SMS Verification**: Integration with Twilio for SMS verification during registration and login.
 
-In the project directory, you can run:
+## Tech Stack
+- **React**: A JavaScript library for building user interfaces.
+- **Tailwind CSS**: A utility-first CSS framework for quickly styling web applications.
+- **Material-UI (MUI)**: A popular React UI framework providing pre-designed components.
+- **ProTask API**: Backend built using Node.js, Express.js, and MongoDB, providing the core functionality for task management and user authentication.
+- **Twilio**: A cloud communications platform for sending SMS messages.
 
-### `npm start`
+## Getting Started
+To run Taskify locally, follow these steps:
+1. Clone the Taskify repository from GitHub.
+2. Navigate to the project directory.
+3. Install dependencies using npm or yarn: `npm install` or `yarn install`.
+4. Start the development server: `npm start` or `yarn start`.
+5. Access the Taskify application in your web browser at `http://localhost:3000`.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Project Structure
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```
+taskify/
+├── public/
+│   ├── index.html
+│   └── ...
+├── src/
+│   ├── assets/
+│   │   └── ...
+│   ├── components/
+│   │   ├── TaskList.jsx
+│   │   ├── TaskItem.jsx
+│   │   ├── LoginForm.jsx
+│   │   ├── RegisterForm.jsx
+│   │   └── ...
+│   ├── pages/
+│   │   ├── Home.jsx
+│   │   ├── Login.jsx
+│   │   ├── Register.js
+│   │   └── Dashboard.js
+│   ├── navigation/
+│   │   └── index.js
+│   ├── services/
+│   │   ├── AuthService.js
+│   │   ├── TaskService.js
+│   │   └── ...
+│   ├── App.js
+│   ├── index.js
+│   └── ...
+└── package.json
+```
 
-### `npm test`
+## Components
+- **TaskList**: Displays a list of tasks with options for editing and deleting.
+- **TaskItem**: Represents an individual task item with details such as name, description, and assigned mentee.
+- **Dashboard**: Main page displaying task lists and options for task management.
+- **Login**: Login page for mentors and mentees to authenticate.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Services
+- **AuthService**: Handles user authentication, including login and registration.
+- **TaskService**: Manages tasks, including creation, deletion, and assignment.
 
-### `npm run build`
+## External APIs
+- **ProTask API**: Backend API for managing tasks and user authentication.
+- **Twilio API**: Integration for sending SMS verification codes during registration and login.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Dependencies
+- **react**: Core library for building user interfaces in Taskify.
+- **react-router-dom**: Library for managing routes and navigation within the application.
+- **axios**: HTTP client for making API requests to the ProTask backend.
+- **tailwindcss**: CSS framework for styling Taskify components.
+- **@mui/material**: Material-UI library for React components.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+## Conclusion
+Taskify provides a comprehensive solution for managing mentor-mentee relationships and task assignments. With its intuitive user interface and robust functionality, Taskify streamlines the task management process and enhances collaboration between mentors and mentees. By leveraging modern web technologies and external APIs, Taskify delivers a seamless user experience and empowers mentors to effectively mentor their mentees.
